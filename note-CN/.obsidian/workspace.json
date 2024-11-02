@@ -1,0 +1,181 @@
+{
+  "main": {
+    "id": "f5b5b6e852479a89",
+    "type": "split",
+    "children": [
+      {
+        "id": "1b47878f1ba176b2",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "3023b55d21a91aeb",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "03-Informed_Search_Astar_and_Heuristics.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "03-Informed_Search_Astar_and_Heuristics"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "432695ac63b7af68",
+    "type": "split",
+    "children": [
+      {
+        "id": "09b307bef579ee47",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "360f557b719f5451",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-folder-closed",
+              "title": "文件列表"
+            }
+          },
+          {
+            "id": "c6619ea8cea20571",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "搜索"
+            }
+          },
+          {
+            "id": "048892cb7758cc8a",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "书签"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "7aebd7f8cffa8486",
+    "type": "split",
+    "children": [
+      {
+        "id": "82ebc0a07ff3d217",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "09b3db2d73a866e5",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "03-Informed_Search_Astar_and_Heuristics.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "03-Informed_Search_Astar_and_Heuristics 的反向链接列表"
+            }
+          },
+          {
+            "id": "c5f27f16beb99e5c",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "03-Informed_Search_Astar_and_Heuristics.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "03-Informed_Search_Astar_and_Heuristics 的出链列表"
+            }
+          },
+          {
+            "id": "6a04af1ca0f05c0e",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              },
+              "icon": "lucide-tags",
+              "title": "标签"
+            }
+          },
+          {
+            "id": "0d2f24ae61c10bb2",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "03-Informed_Search_Astar_and_Heuristics.md"
+              },
+              "icon": "lucide-list",
+              "title": "03-Informed_Search_Astar_and_Heuristics 的大纲"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false
+    }
+  },
+  "active": "3023b55d21a91aeb",
+  "lastOpenFiles": [
+    "attachments/10-Intro_to_Probability.png",
+    "attachments/09-First_Order_Logic.png",
+    "attachments/07-Propositional_Logic_and_Planning-1.png",
+    "attachments/07-Propositional_Logic_and_Planning.png",
+    "attachments/07-Propositional_Logic_and_Planning-2.png",
+    "attachments/06_Expectimax-Monte-Carlo-Tree-Search.png",
+    "attachments/06_Expectimax-Monte-Carlo-Tree-Search-6.png",
+    "attachments/06_Expectimax-Monte-Carlo-Tree-Search-5.png",
+    "attachments/06_Expectimax-Monte-Carlo-Tree-Search-4.png",
+    "attachments/06_Expectimax-Monte-Carlo-Tree-Search-3.png",
+    "attachments/06_Expectimax-Monte-Carlo-Tree-Search-2.png",
+    "attachments",
+    "01-Intro_to_AI_Rational_Agents.md"
+  ]
+}
