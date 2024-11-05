@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "1b47878f1ba176b2",
+        "id": "3decf82c3df2ab44",
         "type": "tabs",
         "children": [
           {
-            "id": "3023b55d21a91aeb",
+            "id": "6b676d28594229c9",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -163,9 +163,10 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "3023b55d21a91aeb",
+  "active": "6b676d28594229c9",
   "lastOpenFiles": [
     "03-Informed_Search_Astar_and_Heuristics.md",
+    "attachments/03_State-Spaces-Uninformed-Search-2.png",
     "02-State_Spaces_Uninformed_Search.md",
     "attachments/10-Intro_to_Probability.png",
     "attachments/09-First_Order_Logic.png",
@@ -176,7 +177,6 @@
     "attachments/06_Expectimax-Monte-Carlo-Tree-Search-6.png",
     "attachments/06_Expectimax-Monte-Carlo-Tree-Search-5.png",
     "attachments/06_Expectimax-Monte-Carlo-Tree-Search-4.png",
-    "attachments/06_Expectimax-Monte-Carlo-Tree-Search-3.png",
     "attachments",
     "01-Intro_to_AI_Rational_Agents.md"
   ]
