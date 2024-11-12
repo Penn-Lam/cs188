@@ -107,7 +107,7 @@ function GRAPH-SEARCH(problem, frontier) return a solution or failure
 
 > [!DEFINITION ]
 > 
-> **consistency**：一致性的核心思想是我们不仅强制执行启发式方法低估从任何给定节点到目标的总距离，而且还强制执行图中每条边的成本/权重。启发式函数测量的边成本仅仅是两个相连节点的启发式值之差。从数学上讲，一致性约束可以表示如下： $∀A,C\quad h(A)−h(C) ≤ cost(A,C)$
+> **consistency**：一致性的核心思想是，我们不仅要求启发式函数低估从任意给定节点到目标的总距离，还要求它低估图中每条边的成本/权重。通过启发式函数测量的边成本仅仅是两个相连节点的启发式值之差。从数学上讲，一致性约束可以表示如下： $∀A,C\quad h(A)−h(C) ≤ cost(A,C)$
 
 > [!THEOREM]
 > 
@@ -129,7 +129,7 @@ function GRAPH-SEARCH(problem, frontier) return a solution or failure
 
 ### Dominance（优势度）
 
-该标准度量（创建“良好”启发式算法以及如何判断一个启发式算法是否优于另一个）是优势度。如果启发式算法 a 支配启发式算法 b，那么在状态空间图中每个节点上，a 的估计目标距离都大于 b 的估计目标距离。数学上表示为 $∀n : h_{a}(n) ≥ h_{b}(n)$ 。
+创建“良好”启发式算法以及如何判断一个启发式算法是否优于另一个的标准度量是优势度。如果启发式算法 a 支配启发式算法 b，那么在状态空间图中每个节点上，a 的估计目标距离都大于 b 的估计目标距离。数学上表示为 $∀n : h_{a}(n) ≥ h_{b}(n)$ 。
 
 > [!INFO]
 > 
@@ -139,7 +139,7 @@ function GRAPH-SEARCH(problem, frontier) return a solution or failure
 > > 
 >> 关键是理解这个 semi-lattice，用序关系来理解就很不错，下面的例子也很好地帮助我们理解。
 > 
-> 以下是包含各种启发式算法 ha、hb 和 hc 的半格示例，从底部的平凡启发式算法到顶部的精确目标距离：
+> 以下是包含各种启发式算法 $h_a$ 、 $h_b$ 和 $h_c$ 的半格示例，从底部的平凡启发式算法到顶部的精确目标距离：
 > 
 > ![](attachments/03_State-Spaces-Uninformed-Search-6.png)
 
@@ -152,7 +152,7 @@ function GRAPH-SEARCH(problem, frontier) return a solution or failure
 - 广度优先搜索 (*Breadth-first Search*)
 - 深度优先搜索 (*Depth-first Search*)
 - 统一代价搜索 (*Uniform Cost Search*)
-- 贪婪搜索 (*Greedy Search*)
+- 贪心搜索 (*Greedy Search*)
 - A* Search
 
 ## link
