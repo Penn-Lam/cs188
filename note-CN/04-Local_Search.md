@@ -6,23 +6,23 @@ tags:
 ---
 ## note
 
-### 本地搜索
+### 局部搜索
 
 > 在前一篇笔记中，我们想要找到目标状态，以及到达那里的最优路径。但在某些问题中，<u>我们只关心找到目标状态</u>——重建路径可能是微不足道的。
 
-本地搜索算法使我们能够找到目标状态，而无需担心到达那里的路径。
+局部搜索算法使我们能够找到目标状态，而无需担心到达那里的路径。
 
 ![](attachments/04_Local-Search.png)
 
 上图显示了状态空间中目标函数的一维图。对于该函数，我们希望找到对应最高目标值的状态。<u>局部搜索算法的基本思想是，从每个状态出发，它们在局部移动到具有更高目标值的状态，直到达到最大值（希望是全局最大值）</u>。
 
-我们将介绍四种此类算法：爬山法、模拟退火、局部光束搜索和遗传算法
+我们将介绍四种此类算法：**爬山法**、**模拟退火**、**局部束搜索**和**遗传算法**
 
 ### 爬山搜索
 
 > [!DEFINITION]
 > 
-> 爬山搜索算法（或最陡上升）从当前状态移动到使目标值增加最多的相邻状态。
+> **爬山搜索**(*hill-climbing search*)算法（或最陡上升）从当前状态移动到使目标值增加最多的相邻状态。
 
 ```python title="pseudocode for hill-climbing"
 function HILL-CLIMBING(problem) returns a state
@@ -36,11 +36,11 @@ function HILL-CLIMBING(problem) returns a state
 
 “爬山法”的“贪婪性”使其容易陷入局部最大值（见图 4.1），因为对于算法来说，这些点在局部看起来像是全局最大值，并且是平原（见图 4.1）。
 
-变体爬山法，如随机爬山法，它随机选择可能的上升动作中的一个动作，已经被提出。
+变体的爬山法，如**随机爬山法**(*stochastic hill-climbing*)，它随机选择可能的上升动作中的一个动作，已经被提出。
 
-另一种变体，随机横向移动，允许不严格增加目标的移动，使算法能够逃离“肩部”。
+另一种变体，**随机横向移动**(*random sideways moves*)，允许不严格增加目标的移动，使算法能够逃离“肩部”。
 
-爬山法是不完整的。另一方面，随机重启动爬山法，它从随机选择的初始状态进行多次爬山搜索，由于某个随机选择的初始状态最终可以收敛到全局最大值，因此它是显然完整的。
+爬山法是不完整的。另一方面，**随机重启动爬山法**(*Random-restart hill-climbing*)，它从随机选择的初始状态进行多次爬山搜索，由于某个随机选择的初始状态最终可以收敛到全局最大值，因此它是显然完整的。
 
 > [!SUMMARY]
 > 
@@ -50,7 +50,7 @@ function HILL-CLIMBING(problem) returns a state
 
 **模拟退火** 旨在结合随机游走（随机移动到附近状态）和爬山法，以获得完整且高效的搜索算法。在模拟退火中，我们允许移动到可以<u>降低目标的状态</u>。
 
-算法在每一步时间戳选择一个随机移动。<u>如果这个移动导致更高的目标值，它总是被接受。如果它导致更低的目标值，那么这个移动会以一定的概率被接受。</u>这个概率由温度参数决定，初始时较高（允许更多的“坏”移动），并按照某种“时间表”逐渐降低。
+算法在每一步时间戳选择一个随机移动。<u>如果这个移动导致更高的目标值，它总是被接受。如果它导致更低的目标值，那么这个移动会以一定的概率被接受。</u>这个概率由温度参数(*temperature parameter*)决定，初始时较高（允许更多的“坏”移动），并按照某种“时间表”逐渐降低。
 
 理论上，<u>如果温度足够缓慢地降低，模拟退火算法将以概率接近 1 达到全局最大值。</u>
 
@@ -68,19 +68,19 @@ function SIMULATED-ANNEALING(problem, schedule) returns a state
             current ← next only with probability e^(ΔE/T)
 ```
 
-### 本地束搜索
+### 局部束搜索
 
-局部束搜索是爬山搜索算法的另一种变体。这两种算法的关键区别在于<u>局部束搜索在每个迭代中跟踪 k 个状态（线程）</u>。
+局部束搜索(*local beam search*)是爬山搜索算法的另一种变体。这两种算法的关键区别在于<u>局部束搜索在每个迭代中跟踪 k 个状态（线程）</u>。
 
 > [!TIP]
 > 
-> 本地束搜索相比于爬山法就是“不要在一棵树上吊死”的思路，其同样可以有随机束搜索等变体。
+>  Local Beam 相比于 Hill-Climbing 就是“不在一棵树上吊死”的思路，其同样可以有 stochastic beam search 等变体。
 
 ### 遗传算法
 
-遗传算法<u>从 k 个随机初始化的状态开始</u>，这些状态称为种群。状态（称为个体）被表示为有限字母表上的字符串。
+遗传算法(*Genetic algorithms*)<u>从 k 个随机初始化的状态开始</u>，这些状态称为种群(*population*)。状态（称为个体(*individuals*)）被表示为有限字母表上的字符串。
 
-> note04 讲的比较啰嗦，但是我觉得先大致看懂伪代码，再结合下面的例子即可。 note04 讲的有点啰嗦，但我认为先大致理解伪代码，然后结合下面的例子就可以了。
+> note04 讲的比较啰嗦，但是我觉得先大致看懂伪代码，再结合下面的例子即可。 
 
 ```python title="pseudocode for genetic algorithm"
 function GENETIC-ALGORITHM(population, FITNESS-FN) returns an individual
@@ -88,7 +88,7 @@ function GENETIC-ALGORITHM(population, FITNESS-FN) returns an individual
             FITNESS-FN, a function that measures the fitness of an individual
     repeat # 反复“繁衍、进化”，直到子代适应性足够强，或者时间足够长
         new_population ← empty set # 初始化新生代为空集
-        for i = 1 to SIZE(population) do # 使子代与父代数相同
+        for i = 1 to SIZE(population) do # 确保新种群的大小与原种群相同
             # 基于适应度选择 x/y，适应度越高，选中可能性越大
             x ← RANDOM-SELECTION(population, FITNESS-FN) 
             y ← RANDOM-SELECTION(population, FITNESS-FN)
